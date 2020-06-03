@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-page-header .ant-page-header-heading {
+  justify-content: center;
+}

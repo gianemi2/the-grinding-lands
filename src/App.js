@@ -4,7 +4,7 @@ import './App.css';
 import 'antd/dist/antd.css';
 import Monsters from './components/Monsters'
 
-import { PageHeader, Typography, Layout } from 'antd'
+import { PageHeader, Typography, Layout, Descriptions } from 'antd'
 
 function App() {
 
@@ -19,7 +19,13 @@ function App() {
                 title="Who drops that lure?!"
                 subTitle="You'll know!"
                 style={{ backgroundColor: "#fafafa" }}
-            />
+            >
+                <Descriptions size="small" column={1}>
+                    <Descriptions.Item label="How to use it?">
+                        Click on the monster name to find out who drops it lures.
+                    </Descriptions.Item>
+                </Descriptions>
+            </PageHeader>
             <Content style={{ padding: 40, marginBottom: 40, minHeight: "calc(100vh - 104px)" }}>
                 <Monsters />
             </Content>
