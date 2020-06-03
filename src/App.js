@@ -23,7 +23,7 @@ function App() {
             <Content style={{ padding: 40, marginBottom: 40, minHeight: "calc(100vh - 104px)" }}>
                 <Monsters />
             </Content>
-            <Footer style={{ borderTop: "1px solid rgba(0, 0, 0, 0.2)", position: "absolute", bottom: 0, left: 0, right: 0 }}>Who drops that lure is completely free and open source. Feel free to <a href="">ping me on Discord</a> or <a href="">open an issue on Github</a> if you found some wrong info.</Footer>
+            <Footer style={{ borderTop: "1px solid rgba(0, 0, 0, 0.2)", position: "absolute", bottom: 0, left: 0, right: 0 }}>Who drops that lure is completely free and open source. If you found some wrong info feel free to <a href="#" target="_blank">post a comment on reddit</a> or <a href="https://github.com/gianemi2/who-drop-that-lure/issues/new" target="_blank">open an issue on Github</a> </Footer>
         </Layout>
     );
 }
