@@ -4,7 +4,7 @@ import './App.css';
 import 'antd/dist/antd.css';
 import Monsters from './components/Monsters'
 
-import { Typography, Layout } from 'antd'
+import { PageHeader, Typography, Layout } from 'antd'
 
 function App() {
 
@@ -13,12 +13,13 @@ function App() {
 
     return (
         <Layout className="App" style={{ position: "relative" }}>
-            <Header style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-            }}
-            ><Title style={{ color: "#fff", alignItems: "center", marginBottom: 0 }}>Who Drops that Lure?!</Title></Header>
+            <PageHeader
+                className="site-page-header"
+                onBack={false}
+                title="Who drops that lure?!"
+                subTitle="You'll know!"
+                style={{ backgroundColor: "#fafafa" }}
+            />
             <Content style={{ padding: 40, marginBottom: 40, minHeight: "calc(100vh - 104px)" }}>
                 <Monsters />
             </Content>
