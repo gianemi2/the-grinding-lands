@@ -16,13 +16,12 @@ function App() {
             <PageHeader
                 className="site-page-header"
                 onBack={false}
-                title="Who drops that lure?!"
-                subTitle="You'll know!"
+                title="The Griding Lands"
                 style={{ backgroundColor: "#fafafa" }}
             >
                 <Descriptions size="small" column={1}>
-                    <Descriptions.Item label="How to use it?">
-                        Click on the monster name to find out who drops it lures.
+                    <Descriptions.Item>
+                        Developed with ❤️ from Livorno
                     </Descriptions.Item>
                 </Descriptions>
             </PageHeader>
