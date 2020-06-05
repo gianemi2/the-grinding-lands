@@ -16,7 +16,7 @@ function App() {
             <PageHeader
                 className="site-page-header"
                 onBack={false}
-                title="The Griding Lands"
+                title="The Grinding Lands"
                 style={{ backgroundColor: "#fafafa" }}
             >
                 <Descriptions size="small" column={1}>
