@@ -41,3 +41,7 @@
 .ant-page-header .ant-page-header-heading {
   justify-content: center;
 }
+
+.ant-table-content {
+  overflow-x: scroll;
+}

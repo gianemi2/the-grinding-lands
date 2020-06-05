@@ -70,6 +70,7 @@ const Monsters = () => {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
+            fixed: 'left',
             render: (monster) => <Monster data={monster} monstersList={dbMonsters} />
         },
         {
