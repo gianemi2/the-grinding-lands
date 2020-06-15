@@ -23,27 +23,30 @@ const setupTableDatas = (monsters) => {
     })
 }
 
+const filterForName = (m, text) => m._name.toLowerCase().indexOf(text) != -1
+const filterForItems = (m, text) => {
+    if (m.items.normal) {
+        if (m.items.normal.toLowerCase().indexOf(text) != -1) {
+            return m
+        }
+    }
+    if (m.items.tempered) {
+        if (m.items.tempered.toLowerCase().indexOf(text) != -1) {
+            return m
+        }
+    }
+}
+
 const filterTableDatas = (monsters, text, whatToFilter) => {
     text = text.toLowerCase()
     if (monsters && monsters.length > 0) {
         switch (whatToFilter) {
+            case 'all':
+                return monsters.filter(m => filterForName(m, text) || filterForItems(m, text))
             case '_name':
-                return monsters.filter(m => {
-                    return m._name.toLowerCase().indexOf(text) != -1
-                })
+                return monsters.filter(m => filterForName(m, text))
             case 'items':
-                return monsters.filter(m => {
-                    if (m.items.normal) {
-                        if (m.items.normal.toLowerCase().indexOf(text) != -1) {
-                            return m
-                        }
-                    }
-                    if (m.items.tempered) {
-                        if (m.items.tempered.toLowerCase().indexOf(text) != -1) {
-                            return m
-                        }
-                    }
-                })
+                return monsters.filter(m => filterForItems(m, text))
             default:
                 return monsters
         }
@@ -59,7 +62,8 @@ const Monsters = () => {
     const [toFilter, setToFilter] = useState('_name')
 
     const selectBefore = (
-        <Select defaultValue="_name" className="select-before" onChange={val => setToFilter(val)}>
+        <Select dropdownMatchSelectWidth={false} defaultValue="_name" className="select-before" onChange={val => setToFilter(val)}>
+            <Option value="all">All</Option>
             <Option value="_name">Name</Option>
             <Option value="items">Items</Option>
         </Select>
@@ -119,16 +123,10 @@ const Monsters = () => {
 
     useEffect(() => {
         if (text.length > 0) {
-            const filteredMonsters = filterTableDatas(monsters, text, toFilter)
+            const filteredMonsters = filterTableDatas(backupMonsters, text, toFilter)
             setMonsters(filteredMonsters)
         } else {
-            if (monsters) {
-                if (backupMonsters.length != monsters.length) {
-                    setMonsters(backupMonsters)
-                }
-            } else {
-                setMonsters(backupMonsters)
-            }
+            setMonsters(backupMonsters)
         }
     }, [text, toFilter])
 
