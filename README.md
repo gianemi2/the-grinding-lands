@@ -19,6 +19,8 @@ Some Tundra's monsters lure dropper are not complete, they are:
 - Nightshade Paolomu
 - _Maybe someone else_
 
+Please, if you find some info regards the missing monsters, open an issue here on Github. It's the best way to keep track about reports.
+
 ## New features on WIP:
 
 - ~~A mobile friendly UI~~
