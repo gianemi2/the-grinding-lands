@@ -460,7 +460,8 @@ window.globalConfig = {
                 24,
                 29,
                 19,
-                32
+                32,
+                37
             ],
             "items": {
                 "normal": "Moonlight Scale",
@@ -996,7 +997,8 @@ window.globalConfig = {
             "relations": [
                 2,
                 18,
-                20
+                20,
+                37
             ],
             "items": {
                 "normal": "Scorching Scale",
@@ -1025,7 +1027,8 @@ window.globalConfig = {
             "relations": [
                 10,
                 13,
-                33
+                33,
+                44
             ],
             "items": {
                 "normal": "Hellfire Mane",
@@ -1247,7 +1250,10 @@ window.globalConfig = {
         {
             "name": "Ruiner Nergigante",
             "id": 44,
-            "relations": [],
+            "relations": [
+                16,
+                47
+            ],
             "items": {
                 "normal": "Extinction Greathorn",
                 "tempered": "Annihilating Temperhorn"
@@ -1318,7 +1324,9 @@ window.globalConfig = {
         {
             "name": "Shrieking Legiana",
             "id": 48,
-            "relations": [],
+            "relations": [
+                37
+            ],
             "locations": [
                 {
                     "id": 5,
@@ -1448,6 +1456,26 @@ window.globalConfig = {
                         "normal": "1-7"
                     }
                 }
+            ]
+        },
+        {
+            "name": "Viper Tobi-Kadachi",
+            "id": 50,
+            "items": {
+                "normal": "Enticing Viperthorn",
+                "tempered": "Tempered Viperthorn"
+            },
+            "locations": [
+                {
+                    "id": 5,
+                    "levels": {
+                        "normal": "1-4",
+                        "tempered": "5-7"
+                    }
+                }
+            ],
+            "relations": [
+                49
             ]
         }
     ],

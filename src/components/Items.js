@@ -7,8 +7,8 @@ const Items = ({ data }) => {
     const Text = Typography
     return (
         <>
-            <Text>{normal}</Text>
-            <Text style={{ color: "#722ed1" }}>{tempered}</Text>
+            {normal ? <Text>{normal}</Text> : false}
+            {tempered ? <Text style={{ color: "#722ed1" }}>{tempered}</Text> : false}
         </>
     )
 }

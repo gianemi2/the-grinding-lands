@@ -48,7 +48,7 @@ const Monster = ({ data, monstersList }) => {
                     {data.name}<InfoCircleOutlined style={{ marginLeft: 5 }} />
                 </a>
             </Dropdown>
-            : false
+            : data.name
     )
 }
 
