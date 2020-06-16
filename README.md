@@ -1,13 +1,13 @@
 # The Grinding Lands
-## A webapp which merge every info regarding Guiding Lands on MHW Iceborne
+### A webapp which merge every info regarding Guiding Lands on MHW Iceborne
 
-### Features:
+## Features:
 - Find every guiding lands monster
 - Find tempered and normal items droppable from every monsters
 - Find what's the required level for every monster spawn
 - Filter by name or items name or both
 
-### What's Missing:
+## What's Missing:
 
 Some Tundra's monsters lure dropper are not complete, they are: 
 
@@ -19,8 +19,14 @@ Some Tundra's monsters lure dropper are not complete, they are:
 - Nightshade Paolomu
 - _Maybe someone else_
 
-### New features on WIP:
+## New features on WIP:
 
 - ~~A mobile friendly UI~~
 - ~~Global search for items and name~~
 - Filter monster lists based on augments
+
+## Thanks to
+
+Thanks to [u/Rinkeil/](https://www.reddit.com/u/Rinkeil/) which creates and found every info about all the lure droppers. I've just made it on a Web App, all the dirty work as been made by him. Thanks!
+
+Thanks to Kiranico, where I've found every information about items and min level required for every monster spawn. 
