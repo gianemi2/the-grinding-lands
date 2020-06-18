@@ -46,7 +46,7 @@ const Monster = ({ data, monstersList }) => {
                     {data.name}<InfoCircleOutlined style={{ marginLeft: 5 }} />
                 </Button>
             </Dropdown>
-            : <Button style={{ color: "rgba(0, 0, 0, 0.65)" }} type="link">{data.name}</Button>
+            : <Button type="text">{data.name}</Button>
     )
 }
 
