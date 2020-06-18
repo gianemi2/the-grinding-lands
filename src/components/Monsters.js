@@ -133,7 +133,12 @@ const Monsters = () => {
     return (
         <>
             <Input placeholder="Type to start search. Use the select on the left for change filters." addonBefore={selectBefore} defaultValue="" value={text} onChange={e => { setText(e.target.value) }} />
-            <Table style={{ marginTop: 15 }} dataSource={monsters} columns={columns}></Table>
+            <Table
+                style={{ marginTop: 15 }}
+                dataSource={monsters}
+                columns={columns}
+                pagination={false}
+            ></Table>
         </>
     )
 }
