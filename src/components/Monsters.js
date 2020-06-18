@@ -137,7 +137,6 @@ const Monsters = () => {
                 style={{ marginTop: 15 }}
                 dataSource={monsters}
                 columns={columns}
-                pagination={false}
             ></Table>
         </>
     )
