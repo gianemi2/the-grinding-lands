@@ -5,7 +5,6 @@ import Items from './Items'
 import { Table, Input, Select } from 'antd'
 const { Option } = Select
 
-
 const setupTableDatas = (monsters) => {
     return monsters.map(monster => {
         return {
@@ -23,15 +22,18 @@ const setupTableDatas = (monsters) => {
     })
 }
 
-const filterForName = (m, text) => m._name.toLowerCase().indexOf(text) != -1
+const dbMonsters = window.globalConfig.monsters
+const backupMonsters = setupTableDatas(dbMonsters)
+
+const filterForName = (m, text) => m._name.toLowerCase().indexOf(text) !== -1
 const filterForItems = (m, text) => {
     if (m.items.normal) {
-        if (m.items.normal.toLowerCase().indexOf(text) != -1) {
+        if (m.items.normal.toLowerCase().indexOf(text) !== -1) {
             return m
         }
     }
     if (m.items.tempered) {
-        if (m.items.tempered.toLowerCase().indexOf(text) != -1) {
+        if (m.items.tempered.toLowerCase().indexOf(text) !== -1) {
             return m
         }
     }
@@ -54,8 +56,6 @@ const filterTableDatas = (monsters, text, whatToFilter) => {
 }
 
 const Monsters = () => {
-    const dbMonsters = window.globalConfig.monsters
-    const backupMonsters = setupTableDatas(dbMonsters)
 
     const [monsters, setMonsters] = useState(backupMonsters)
     const [text, setText] = useState('')

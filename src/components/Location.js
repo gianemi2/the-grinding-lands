@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Avatar, Badge } from 'antd'
+import React from 'react'
+import { Badge } from 'antd'
 
 const Location = ({ id, data }) => {
-    var location = data.find((i) => i.id == id)
+    var location = data.find((i) => i.id === id)
 
     return (
         location

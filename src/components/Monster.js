@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Location from './Location'
 
 
-import { Avatar, Dropdown, Menu } from 'antd'
+import { Button, Dropdown, Menu } from 'antd'
 import { InfoCircleOutlined } from '@ant-design/icons';
 
 
@@ -10,7 +9,7 @@ const Monster = ({ data, monstersList }) => {
     const [relations, setRelations] = useState([]);
 
     const searchByID = (id, haystack) => {
-        return id == haystack.id
+        return id === haystack.id
     }
 
     const handleUserClick = () => {
@@ -18,7 +17,6 @@ const Monster = ({ data, monstersList }) => {
             const relationsDetails = data.relations.map((target) => {
                 return monstersList.filter((i) => searchByID(target, i))[0]
             })
-            console.log(relationsDetails)
             setRelations(relationsDetails);
         } else {
             setRelations([{ name: "No lures dropper found." }])
@@ -44,11 +42,11 @@ const Monster = ({ data, monstersList }) => {
     return (
         data.relations
             ? <Dropdown onClick={handleUserClick} overlay={menu} trigger={['click']}>
-                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                <Button type="link" className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                     {data.name}<InfoCircleOutlined style={{ marginLeft: 5 }} />
-                </a>
+                </Button>
             </Dropdown>
-            : data.name
+            : <Button style={{ color: "rgba(0, 0, 0, 0.65)" }} type="link">{data.name}</Button>
     )
 }
 
