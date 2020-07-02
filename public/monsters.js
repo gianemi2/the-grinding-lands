@@ -1306,7 +1306,7 @@ window.globalConfig = {
         {
             "name": "Stygian Zinogre",
             "id": 47,
-            "relations": [],
+            "relations": [49, 27, 50, 37, 48],
             "items": {
                 "normal": "Gushing Dragonhold",
                 "tempered": "Tempered Dragonhold"
