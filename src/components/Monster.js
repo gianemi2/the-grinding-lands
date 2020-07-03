@@ -29,7 +29,7 @@ const Monster = ({ data, monstersList }) => {
             <Menu.ItemGroup title="Lures dropped by:">
                 {
                     relations.map(relation => (
-                        <Menu.Item key="0">
+                        <Menu.Item key={`${data.id}-${relation.name}`}>
                             {relation.name}
                         </Menu.Item>
                     ))

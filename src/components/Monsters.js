@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import translateMonsters from '../hooks/translateMonsters'
 import Monster from './Monster'
 import Location from './Location'
 import Items from './Items'
@@ -22,10 +23,14 @@ const setupTableDatas = (monsters) => {
     })
 }
 
-const dbMonsters = window.globalConfig.monsters
+const defaultLang = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'en'
+const dbMonsters = translateMonsters(defaultLang)
 const backupMonsters = setupTableDatas(dbMonsters)
 
-const filterForName = (m, text) => m._name.toLowerCase().indexOf(text) !== -1
+const filterForName = (m, text) => {
+    console.log(m);
+    return m._name.toLowerCase().indexOf(text) !== -1
+}
 const filterForItems = (m, text) => {
     if (m.items.normal) {
         if (m.items.normal.toLowerCase().indexOf(text) !== -1) {
@@ -57,9 +62,16 @@ const filterTableDatas = (monsters, text, whatToFilter) => {
 
 const Monsters = () => {
 
+    console.log(backupMonsters);
+
     const [monsters, setMonsters] = useState(backupMonsters)
     const [text, setText] = useState('')
     const [toFilter, setToFilter] = useState('_name')
+
+    const updateLang = (lang) => {
+        localStorage.setItem('lang', lang)
+        window.location.reload();
+    }
 
     const selectBefore = (
         <Select dropdownMatchSelectWidth={false} defaultValue="_name" className="select-before" onChange={val => setToFilter(val)}>
@@ -68,6 +80,13 @@ const Monsters = () => {
             <Option value="items">Items</Option>
         </Select>
     );
+
+    const selectAfter = (
+        <Select dropdownMatchSelectWidth={false} defaultValue={defaultLang} className="select-before" onChange={val => updateLang(val)}>
+            <Option value="en">English</Option>
+            <Option value="fr">Français</Option>
+        </Select>
+    )
 
     const columns = [
         {
@@ -128,11 +147,12 @@ const Monsters = () => {
         } else {
             setMonsters(backupMonsters)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text, toFilter])
 
     return (
         <>
-            <Input placeholder="Type to start search. Use the select on the left for change filters." addonBefore={selectBefore} defaultValue="" value={text} onChange={e => { setText(e.target.value) }} />
+            <Input placeholder="Type to start search. Use the select on the left for change filters." addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="" value={text} onChange={e => { setText(e.target.value) }} />
             <Table
                 style={{ marginTop: 15 }}
                 dataSource={monsters}
