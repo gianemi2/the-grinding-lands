@@ -307,7 +307,8 @@ window.globalConfig = {
                 20,
                 22,
                 23,
-                30
+                30,
+                49
             ],
             "items": {
                 "normal": "Soulrender Talon",

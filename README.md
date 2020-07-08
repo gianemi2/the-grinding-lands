@@ -27,8 +27,10 @@ Please, if you find some info regards the missing monsters, open an issue here o
 - ~~Global search for items and name~~
 - Filter monster lists based on augments
 
-## Thanks to
+## Thanks
 
-Thanks to [u/Rinkeil/](https://www.reddit.com/u/Rinkeil/) which creates and found every info about all the lure droppers. I've just made it on a Web App, all the dirty work as been made by him. Thanks!
+to [u/Rinkeil/](https://www.reddit.com/u/Rinkeil/) which creates and found every info about all the lure droppers. I've just made it on a Web App, all the dirty work as been made by him. Thanks!
 
-Thanks to Kiranico, where I've found every information about items and min level required for every monster spawn. 
+to Kiranico, where I've found every information about items and min level required for every monster spawn. 
+
+to [u/wondermayo](https://www.reddit.com/user/wondermayo) for french translations.
