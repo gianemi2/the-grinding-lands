@@ -23,15 +23,18 @@ function App() {
                     </Descriptions.Item>
                 </Descriptions>
             </PageHeader>
-            <Content style={{ padding: 40, marginBottom: 40, minHeight: "calc(100vh - 104px)" }}>
+            <Content style={{ padding: 15, minHeight: "calc(100vh - 104px)" }}>
                 <Monsters />
             </Content>
-            <Footer style={{ borderTop: "1px solid rgba(0, 0, 0, 0.2)", position: "absolute", bottom: 0, left: 0, right: 0 }}>
+            <Footer style={{ borderTop: "1px solid rgba(0, 0, 0, 0.2)" }}>
                 thegrindinglands is completely free and open source. If you found some wrong info feel free to <a href="https://www.reddit.com/r/MonsterHunterMeta/comments/gvvnc7/icerborne_a_little_web_app_for_find_out_who_drops" target="_blank" rel="noopener noreferrer">post a comment on reddit</a> or <a href="https://github.com/gianemi2/who-drop-that-lure/issues/new" target="_blank" rel="noopener noreferrer">open an issue on Github</a>
                 <ul style={{ listStyle: 'none' }}>
                     <li><b>Thanks for and to:</b></li>
                     <li>
                         French translations: <a href="https://www.reddit.com/user/wondermayo" target="_blank" rel="noopener noreferrer">u/wondermayo</a>
+                    </li>
+                    <li>
+                        Spanish translations: <a href="https://www.reddit.com/user/MOPOP99" target="_blank" rel="noopener noreferrer">u/MOPOP99</a>
                     </li>
                 </ul>
             </Footer>

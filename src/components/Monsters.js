@@ -83,8 +83,9 @@ const Monsters = () => {
 
     const selectAfter = (
         <Select dropdownMatchSelectWidth={false} defaultValue={defaultLang} className="select-before" onChange={val => updateLang(val)}>
-            <Option value="en">English</Option>
-            <Option value="fr">Français</Option>
+            <Option value="en">English <span role="img" aria-label="english flag">🇬🇧</span></Option>
+            <Option value="fr">Français <span role="img" aria-label="french flag">🇫🇷</span></Option>
+            <Option value="es">Español <span role="img" aria-label="spanish flag">🇪🇸</span></Option>
         </Select>
     )
 

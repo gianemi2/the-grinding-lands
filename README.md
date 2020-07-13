@@ -34,3 +34,4 @@ to [u/Rinkeil/](https://www.reddit.com/u/Rinkeil/) which creates and found every
 to Kiranico, where I've found every information about items and min level required for every monster spawn. 
 
 to [u/wondermayo](https://www.reddit.com/user/wondermayo) for french translations.
+to [u/MOPOP99](https://www.reddit.com/user/MOPOP99) for spanish translations.
