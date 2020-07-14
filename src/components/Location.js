@@ -14,7 +14,7 @@ const Location = ({ id, data }) => {
                                 <Badge count={location.levels.normal}
                                     style={{
                                         backgroundColor: "#EEEEEE",
-                                        color: "#999"
+                                        color: "rgba(0,0,0,.65)"
                                     }}
                                     title="Normal version, min and max biome's level"
                                 ></Badge>
