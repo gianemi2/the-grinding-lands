@@ -66,26 +66,20 @@ const Monsters = () => {
 
     const [monsters, setMonsters] = useState(backupMonsters)
     const [text, setText] = useState('')
-    const [toFilter, setToFilter] = useState('_name')
+    const [toFilter, setToFilter] = useState('all')
 
     const updateLang = (lang) => {
         localStorage.setItem('lang', lang)
         window.location.reload();
     }
 
-    const selectBefore = (
-        <Select dropdownMatchSelectWidth={false} defaultValue="_name" className="select-before" onChange={val => setToFilter(val)}>
-            <Option value="all">All</Option>
-            <Option value="_name">Name</Option>
-            <Option value="items">Items</Option>
-        </Select>
-    );
-
     const selectAfter = (
         <Select dropdownMatchSelectWidth={false} defaultValue={defaultLang} className="select-before" onChange={val => updateLang(val)}>
             <Option value="en">English <span role="img" aria-label="english flag">🇬🇧</span></Option>
             <Option value="fr">Français <span role="img" aria-label="french flag">🇫🇷</span></Option>
             <Option value="es">Español <span role="img" aria-label="spanish flag">🇪🇸</span></Option>
+            <Option value="it">Italiano <span role="img" aria-label="italian flag">🇮🇹</span></Option>
+            <Option value="de">Deutsche <span role="img" aria-label="deutsche flag">🇩🇪</span></Option>
         </Select>
     )
 
@@ -153,7 +147,7 @@ const Monsters = () => {
 
     return (
         <>
-            <Input placeholder="Type to start search. Use the select on the left for change filters." addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="" value={text} onChange={e => { setText(e.target.value) }} />
+            <Input placeholder="Type to start search..." addonAfter={selectAfter} defaultValue="" value={text} onChange={e => { setText(e.target.value) }} />
             <Table
                 style={{ marginTop: 15 }}
                 dataSource={monsters}
