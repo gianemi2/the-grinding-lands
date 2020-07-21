@@ -19,7 +19,7 @@ function App() {
             >
                 <Descriptions size="small" column={1}>
                     <Descriptions.Item>
-                        Developed with <span style={{ marginRight: 5 }} role="img" aria-label="a lot of love">❤️</span> from Livorno
+                        Developed with <span style={{ marginRight: 5 }} role="img" aria-label="a lot of love">❤️</span> from Livorno, Italy
                     </Descriptions.Item>
                 </Descriptions>
             </PageHeader>
