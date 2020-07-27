@@ -44,19 +44,10 @@ const filterForItems = (m, text) => {
     }
 }
 
-const filterTableDatas = (monsters, text, whatToFilter) => {
+const filterTableDatas = (monsters, text) => {
     text = text.toLowerCase()
     if (monsters && monsters.length > 0) {
-        switch (whatToFilter) {
-            case 'all':
-                return monsters.filter(m => filterForName(m, text) || filterForItems(m, text))
-            case '_name':
-                return monsters.filter(m => filterForName(m, text))
-            case 'items':
-                return monsters.filter(m => filterForItems(m, text))
-            default:
-                return monsters
-        }
+        return monsters.filter(m => filterForName(m, text) || filterForItems(m, text))
     }
 }
 
@@ -66,7 +57,6 @@ const Monsters = () => {
 
     const [monsters, setMonsters] = useState(backupMonsters)
     const [text, setText] = useState('')
-    const [toFilter, setToFilter] = useState('all')
 
     const updateLang = (lang) => {
         localStorage.setItem('lang', lang)
@@ -137,13 +127,12 @@ const Monsters = () => {
 
     useEffect(() => {
         if (text.length > 0) {
-            const filteredMonsters = filterTableDatas(backupMonsters, text, toFilter)
+            const filteredMonsters = filterTableDatas(backupMonsters, text)
             setMonsters(filteredMonsters)
         } else {
             setMonsters(backupMonsters)
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [text, toFilter])
+    }, [text])
 
     return (
         <>
