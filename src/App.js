@@ -10,7 +10,7 @@ function App() {
     const { Content, Footer } = Layout
 
     return (
-        <Layout className="App" style={{ position: "relative" }}>
+        <Layout className="App" style={{ position: "relative", minHeight: '100vh' }}>
             <PageHeader
                 className="site-page-header"
                 onBack={false}
@@ -23,7 +23,7 @@ function App() {
                     </Descriptions.Item>
                 </Descriptions>
             </PageHeader>
-            <Content style={{ padding: 15, minHeight: "calc(100vh - 104px)" }}>
+            <Content style={{ padding: 15 }}>
                 <Monsters />
             </Content>
             <Footer style={{ borderTop: "1px solid rgba(0, 0, 0, 0.2)" }}>
