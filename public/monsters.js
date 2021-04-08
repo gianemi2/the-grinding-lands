@@ -1478,6 +1478,157 @@ window.globalConfig = {
                     }
                 }
             ]
+        },
+        {
+            "name": "Guiding Wasteland Dragonbone",
+            "id": 47,
+            "items": {
+                "tempered": "Guiding Wasteland Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 1,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Reef Crystal",
+            "id": 48,
+            "items": {
+                "tempered": "Guiding Reef Crystal"
+            },
+            "locations": [
+                {
+                    "id": 2,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Effluvial Crystal",
+            "id": 49,
+            "items": {
+                "tempered": "Guiding Effluvial Crystal"
+            },
+            "locations": [
+                {
+                    "id": 3,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Magma Crystal",
+            "id": 50,
+            "items": {
+                "tempered": "Guiding Magma Crystal"
+            },
+            "locations": [
+                {
+                    "id": 4,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Rime Crystal",
+            "id": 51,
+            "items": {
+                "tempered": "Guiding Rime Crystal"
+            },
+            "locations": [
+                {
+                    "id": 5,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Wasteland Dragonbone",
+            "id": 52,
+            "items": {
+                "tempered": "Guiding Wasteland Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 1,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Reef Dragonbone",
+            "id": 53,
+            "items": {
+                "tempered": "Guiding Reef Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 2,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Rotted Dragonbone",
+            "id": 54,
+            "items": {
+                "tempered": "Guiding Rotted Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 3,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Guiding Volcanic Dragonbone",
+            "id": 55,
+            "items": {
+                "tempered": "Guiding Volcanic Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 4,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
+        }
+        ,
+        {
+            "name": "Guiding Tundra Dragonbone",
+            "id": 56,
+            "items": {
+                "tempered": "Guiding Tundra Dragonbone"
+            },
+            "locations": [
+                {
+                    "id": 5,
+                    "levels": {
+                        "tempered": "7"
+                    }
+                }
+            ]
         }
     ],
     biomes: [
