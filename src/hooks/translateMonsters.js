@@ -4,7 +4,7 @@ const isValidDictionary = (dictionary, lang) => {
 }
 
 const translate = (dictionary, string, lang) => (
-    dictionary[lang].hasOwnProperty(string) ? dictionary[lang][string] : false
+    dictionary[lang].hasOwnProperty(string) ? dictionary[lang][string] : string
 )
 
 function translateMonsters(lang) {
